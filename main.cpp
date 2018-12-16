@@ -46,10 +46,6 @@ int main(int argc, char *argv[]) {
   if (glewInit() != GLEW_OK) exit(1);
 
   glfwSwapInterval(1);
-  auto f = [&](GLFWwindow *window, int key, int scancode, int action,
-               int mods) {
-    scene.keycallback(window, key, scancode, action, mods);
-  };
   glfwSetKeyCallback(window, keycallback);
 
   scene.setupProgram();
