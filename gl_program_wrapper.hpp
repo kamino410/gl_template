@@ -25,12 +25,10 @@ class GLSLProgramWrapper {
   GLSLProgramWrapper();
   ~GLSLProgramWrapper();
 
-  /// compile and attach shader to program
-  /// Exception : GLSLProgramException
+  /// compile and attach the shader to the program
   void compileShader(const char *, GLSLShaderType);
 
   /// link program
-  /// Exception : GLSLProgramException
   void link();
 
   void bindAttribLocation(GLuint, const char *);
